@@ -35,7 +35,7 @@ To run the simulations on your local machine, please follow these steps.
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/YOUR_USERNAME/resonance-damping-stability.git](https://github.com/YOUR_USERNAME/resonance-damping-stability.git)
+    git clone [https://github.com/U-C4N/resonance-damping-stability.git](https://github.com/U-C4N/resonance-damping-stability.git)
     cd resonance-damping-stability
     ```
 2.  **Install the required libraries:**
