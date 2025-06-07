@@ -12,8 +12,7 @@ The analysis is conducted using `SciPy` for numerical integration and `Matplotli
 
 The findings and implications of this research have been compiled into a formal academic paper. You can read more about our approach and discoveries here:
 
-**[The Effect of Resonance and Damping on Dynamic System Stability: A Numerical Approach](http.uc4n.com/blog/the-effect-of-resonance-and-damping-on-dynamic-system-stability-a-numerical-approach)**
-
+**[The Effect of Resonance and Damping on Dynamic System Stability: A Numerical Approach](http://uc4n.com/blog/the-effect-of-resonance-and-damping-on-dynamic-system-stability-a-numerical-approach)**
 ---
 
 ## 🚀 About The Project
