@@ -102,6 +102,24 @@ These results confirm that damping parameters must be carefully optimized in eng
 
 ---
 
+### ⚡️ Energy Harvesting under Safety Constraint
+
+We scanned the damping coefficient across four decades while forcing
+the system **at resonance** and enforcing a safety limit
+\\(|x|_{max} ≤ 0.50\\,\\text{m}\\).
+The optimal point satisfies structural safety and still delivers
+almost 5 W of mean regenerated power:
+
+![Energy Harvesting Optimization](figs/energy_harvest_opt.png)
+*Figure&nbsp;5. Average harvested power versus damping coefficient.
+Green dots meet the safety limit; red crosses violate it.
+The dashed line marks the optimum \\(c_{opt}≈2.36\\,\\text{N·s/m}\\).*
+
+> For applications such as regenerative vehicle dampers, a setting
+around 2 N·s/m maximizes usable energy without compromising ride safety.
+
+---
+
 ## 💡 Advanced Applications & Future Vision
 
 The fundamental insights from this project serve as a stepping stone for numerous advanced technologies and future research directions.
