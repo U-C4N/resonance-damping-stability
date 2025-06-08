@@ -110,7 +110,7 @@ the system **at resonance** and enforcing a safety limit
 The optimal point satisfies structural safety and still delivers
 almost 5 W of mean regenerated power:
 
-![Energy Harvesting Optimization](figs/energy_harvest_opt.png)
+![Energy Harvesting Optimization](src/figs/energy_harvest_opt.png)
 *Figure&nbsp;5. Average harvested power versus damping coefficient.
 Green dots meet the safety limit; red crosses violate it.
 The dashed line marks the optimum \\(c_{opt}≈2.36\\,\\text{N·s/m}\\).*
