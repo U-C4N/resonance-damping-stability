@@ -4,6 +4,7 @@ from typing import Tuple
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
+from sdof import rhs as sdof_rhs
 
 # -------------------------------------------------
 # Parameters
@@ -32,13 +33,6 @@ os.makedirs(FIG_DIR, exist_ok=True)
 # -------------------------------------------------
 # Model functions
 # -------------------------------------------------
-
-def sdof_rhs(t: float, y: Tuple[float, float], m: float, c: float, k: float, F0: float, omega: float):
-    x, v = y
-    force = F0 * np.sin(omega * t)
-    dxdt = v
-    dvdt = (force - c * v - k * x) / m
-    return [dxdt, dvdt]
 
 
 def simulate(m: float, c: float, k: float, F0: float, omega: float) -> Tuple[float, float]:

@@ -1,20 +1,7 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-
-
-def amplitude_closed_form(m: float, c: float, k: float, F0: float, omega: np.ndarray) -> np.ndarray:
-    """Returns the amplitude of the steady state response analytically.
-
-    A(ω) = F0 / sqrt( (k - m ω^2)^2 + (c ω)^2 )
-    """
-    denom = np.sqrt((k - m * omega**2) ** 2 + (c * omega) ** 2)
-    return F0 / denom
-
-
-def zeta(m: float, c: float, k: float) -> float:
-    """Damping ratio ζ = c / (2 * sqrt(k m))"""
-    return c / (2 * np.sqrt(k * m))
+from sdof import amplitude_closed_form, zeta
 
 
 def main():

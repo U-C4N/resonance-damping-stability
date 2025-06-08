@@ -4,53 +4,10 @@ from typing import Tuple
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
-# -------------------------------------------------
-# Helper Functions
-# -------------------------------------------------
-
-def amplitude_closed_form(m: float, c: float, k: float, F0: float, omega: np.ndarray) -> np.ndarray:
-    denom = np.sqrt((k - m * omega ** 2) ** 2 + (c * omega) ** 2)
-    return F0 / denom
-
-
-def zeta(m: float, c: float, k: float) -> float:
-    return c / (2.0 * np.sqrt(k * m))
-
-
-def sdof_rhs(t: float, y: Tuple[float, float], m: float, c: float, k: float, F0: float, omega: float):
-    x, v = y
-    force = F0 * np.sin(omega * t)
-    dxdt = v
-    dvdt = (force - c * v - k * x) / m
-    return [dxdt, dvdt]
-
-
-def simulate_amplitude(m: float, c: float, k: float, F0: float, omega: float,
-                       t_end: float = 200.0, discard_ratio: float = 0.8) -> float:
-    """Measures the steady-state amplitude using time-domain simulation.
-
-    discard_ratio: Used to discard the transient part of the simulation.
-    """
-    t_eval = np.linspace(0.0, t_end, 5000)
-    sol = solve_ivp(
-        fun=sdof_rhs,
-        t_span=(0.0, t_end),
-        y0=[0.0, 0.0],
-        args=(m, c, k, F0, omega),
-        t_eval=t_eval,
-        method="RK45",
-    )
-    x = sol.y[0]
-    # Discard transient
-    start_idx = int(len(t_eval) * discard_ratio)
-    x_ss = x[start_idx:]
-    return np.max(np.abs(x_ss))
-
-
+from sdof import amplitude_closed_form, zeta, simulate_amplitude
 # -------------------------------------------------
 # Main Flow
 # -------------------------------------------------
-
 def main():
     # System parameters
     m = 1.0
