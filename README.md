@@ -79,6 +79,25 @@ By testing different damping coefficients during resonance, it becomes evident t
 
 <br>
 
+### 🔍 Frequency-Domain Validation
+
+The analytical magnification–factor curve and five *time-domain* sample
+points align almost perfectly, confirming that the closed-form solution
+matches the numerical ODE results.
+
+![Analytical vs. Simulation](figs/freq_response_validation.png)
+*Figure&nbsp;3. Analytical frequency-response curve (solid) vs. time-domain
+simulation points (markers) for four damping levels.*
+
+<br>
+
+The quality factor, \\(Q = 1/(2\\zeta)\\), follows the expected
+inverse-proportional law with damping:
+
+![Q vs. Damping](figs/Q_vs_c.png)
+*Figure&nbsp;4. Log–log plot of quality factor versus damping coefficient.*
+
+
 These results confirm that damping parameters must be carefully optimized in engineering design to ensure system reliability and safety.
 
 ---
