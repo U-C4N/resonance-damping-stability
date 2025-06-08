@@ -85,7 +85,7 @@ The analytical magnification–factor curve and five *time-domain* sample
 points align almost perfectly, confirming that the closed-form solution
 matches the numerical ODE results.
 
-![Analytical vs. Simulation](figs/freq_response_validation.png)
+![Analytical vs. Simulation](src/figs/freq_response_validation.png)
 *Figure&nbsp;3. Analytical frequency-response curve (solid) vs. time-domain
 simulation points (markers) for four damping levels.*
 
@@ -94,7 +94,7 @@ simulation points (markers) for four damping levels.*
 The quality factor, \\(Q = 1/(2\\zeta)\\), follows the expected
 inverse-proportional law with damping:
 
-![Q vs. Damping](figs/Q_vs_c.png)
+![Q vs. Damping](src/figs/Q_vs_c.png)
 *Figure&nbsp;4. Log–log plot of quality factor versus damping coefficient.*
 
 
